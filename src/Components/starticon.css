@@ -1,0 +1,31 @@
+.startCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: White;
+    font-size: 70px;
+    transition: .5s;
+    transform: scale(1);
+    position: absolute;
+    opacity: 1;
+}
+
+.startvalue{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.startvalue h1{
+    color: rgb(254, 88, 88);
+}
+
+.startvalue P{
+    color: rgb(159, 159, 159);
+    font-size: 20PX;
+}
