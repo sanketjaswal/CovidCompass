@@ -85,6 +85,10 @@ function App() {
           ShowInfoBox={ShowInfoBox}
         />
         {/* <DetailedInfo /> */}
+        <script
+          type="text/javascript"
+          src="./Components/assets/conryArray.js"
+        />
       </div>
     </div>
   );
