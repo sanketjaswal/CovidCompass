@@ -4,7 +4,7 @@ import { Starticon } from "./Components/starticon";
 import { Navbar } from "./Components/navbar";
 import { WorldSVG } from "./Components/worldsvg";
 import { Infomation } from "./Components/info";
-import { ContryARR } from "./Components/assets/conryArray";
+// import { ContryARR } from "./Components/assets/conryArray";
 
 function App() {
   //Name Tag
