@@ -206,7 +206,7 @@ export const ContryARR = [
   "Tajikistan",
   "Tanzania",
   "Thailand",
-  "Timor-Leste",
+  "Timor-leste",
   "Togo",
   "Tokelau",
   "Tonga",

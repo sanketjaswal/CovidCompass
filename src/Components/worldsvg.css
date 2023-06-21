@@ -1,6 +1,5 @@
 
 svg {
-  cursor: pointer;
   transition: .5s;
   stroke: var(--worldColor);
 }
@@ -12,6 +11,8 @@ svg path:hover {
 
 path{
   transition: .5s;
+    cursor: pointer;
+
 }
 
 .svgtopbar{

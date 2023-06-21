@@ -2,7 +2,7 @@ import React from "react";
 import "./navbar.css";
 import { ContryARR } from "./assets/conryArray";
 
-export const Navbar = ({ TargetE, getInfo, setTargetE }) => {
+export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
   //Nav mover
   let countMenu = true;
   const moveNav = (evt) => {
@@ -74,18 +74,30 @@ export const Navbar = ({ TargetE, getInfo, setTargetE }) => {
           words[i] = words[i][0].toUpperCase() + words[i].substr(1);
         }
         contryName = words.join(" ");
-        contryArr = this.documentElement.getElementsByClassName(contryName);
-        // console.log(contryArr);
-        if (typeof contryName == "string") {
+        if (
+          contryName.match(/usa/i) ||
+          contryName.match(/uae/i) ||
+          contryName.match(/drc/i)
+        ) {
+          console.log("its a match");
+          contryName = contryName.toUpperCase();
+          console.log(contryName);
+          getInfo(contryName);
+          setTargetE(contryName);
+        } else if (typeof contryName == "string") {
           if (ContryARR.includes(contryName)) {
             console.log(contryName);
             setTargetE(contryName);
+            ShowInfoBox();
           } else {
-            setTargetE("hellloooo");
+            setTargetE(` ${contryName} not found`);
+            getInfo("not found");
           }
 
           getInfo(contryName);
         }
+        contryArr = this.documentElement.getElementsByClassName(contryName);
+        console.log(contryName);
       }
       // country   color changer on click
       let colorARR = [
