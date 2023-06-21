@@ -39,8 +39,8 @@ export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
 
   //   Nav retract timer
   const navHover = (targetForNAV) => {
-    document.querySelectorAll(".MenuTab").forEach((e) => {
-      e.addEventListener("mouseleave", function () {
+    document.querySelectorAll("#navbar").forEach((e) => {
+      e.addEventListener("mouseleave", function() {
         setTimeout(() => {
           returner(targetForNAV);
         }, 1000);
@@ -60,7 +60,7 @@ export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
   let contryName;
   let cp;
   const grabEnter = () => {
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener("keydown", function(event) {
       let gg = document
         .getElementsByClassName("searchBar")[0]
         .value.toLowerCase();
@@ -68,7 +68,7 @@ export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
 
       let contryArr = [];
 
-      if (event.code === "Enter") {
+      if (event.code === "Enter" && gg !== "") {
         cp = colorPicker();
         for (let i = 0; i < words.length; i++) {
           words[i] = words[i][0].toUpperCase() + words[i].substr(1);
@@ -149,11 +149,12 @@ export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
         </div>
         <p className="meuText">Statistics</p>
       </div>
-      <div>
+      <div className="nameHolder">
         <div className="NameTag">
           <h1>{TargetE}</h1>
         </div>
       </div>
+      <div className="navHolder"></div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ import { Infomation } from "./Components/info";
 function App() {
   //Name Tag
   const [Response, setResponse] = useState("hello");
-  const [TargetE, setTargetE] = useState("Covid!9");
+  const [TargetE, setTargetE] = useState("COVID!9");
   const [SelectedInfo, setSelectedInfo] = useState("haha");
   const [flagInfo, setflagInfo] = useState("");
 
