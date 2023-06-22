@@ -1,0 +1,69 @@
+.dSlotCont {
+  background-color: rgba(46, 200, 84, 0);
+  width: 20%;
+  height: 28%;
+  margin: 2%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border-radius: 10px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: rgb(255, 255, 255);
+  text-decoration: dotted;
+  box-shadow: 0px 0px 2px 2px rgba(119, 119, 119, 0.699);
+  transition: 0.5s;
+  text-shadow: 10px 10px 7px #3b3b3b;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.dSlotCont:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 5px 2px white;
+  transition: 0.1s;
+  text-shadow: 2px 2px 1px #3b3b3b;
+}
+
+.dNameHolder {
+  /* background-color: #cabc38; */
+  display: flex;
+  justify-content: center;
+  align-items: last baseline;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: -5%;
+    
+}
+
+.dNameHolder p {
+  margin: 0 5px;
+  font-size: 8px;
+  font-weight: bolder;
+}
+
+.dNameHolder h2 {
+  margin: 0 3px;
+  font-weight: bolder;
+  font-size: 25px;
+}
+.dDataHolder {
+  /* background-color: rgb(255, 0, 111); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  bottom: 30%;
+  font-size: 22px;
+  text-overflow: clip;
+}
+
+.dDataHolder h1 {
+  text-align: center;
+  text-shadow: 10px 10px 10px 10px black;
+  text-transform: uppercase;
+}

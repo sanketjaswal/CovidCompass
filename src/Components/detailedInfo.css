@@ -1,0 +1,26 @@
+.detailedCont {
+  background-color: #1b1717;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  /* bottom: 0; */
+  z-index: -1;
+  opacity: 0;
+  transition: 0.5s;
+  transform: scale(10);
+}
+
+.DetailHolder {
+  /* background-color: rgba(137, 43, 226, 0.641); */
+  width: 95%;
+  height: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 1%;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  position: absolute;
+}

@@ -4,6 +4,7 @@ import { Starticon } from "./Components/starticon";
 import { Navbar } from "./Components/navbar";
 import { WorldSVG } from "./Components/worldsvg";
 import { Infomation } from "./Components/info";
+import { DetailedInfo } from "./Components/detailedInfo";
 // import { ContryARR } from "./Components/assets/conryArray";
 
 function App() {
@@ -38,14 +39,13 @@ function App() {
     response = await fetch(`https://disease.sh/v3/covid-19/countries`);
     response = await response.json();
     setResponse(response);
-    // console.log(response);
+    console.log(response);
   }
 
   //get infomation from the response
   let ctryFound = {};
   const getInfo = (contryName) => {
     let listSearch = Response;
-    // console.log(listSearch[0].country);
     for (let i = 0; i < listSearch.length; i++) {
       if (listSearch[i].country === contryName) {
         ctryFound = listSearch[i];
@@ -65,7 +65,40 @@ function App() {
   const ShowInfoBox = () => {
     setTimeout(() => {
       document.getElementsByClassName("infoContainer")[0].style.opacity = 1;
+      document.getElementsByClassName("infoContainer")[0].style.transform =
+        "scale(1)";
     }, 500);
+  };
+
+  const getDetailedInfo = () => {
+    document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
+    document.getElementsByClassName("NameTag")[0].style.opacity = 0;
+    document.getElementsByClassName("NameTag")[0].style.left = "240px";
+    document.getElementsByClassName("homebtn")[0].style.opacity = 1;
+
+    document.getElementsByClassName("detailedCont")[0].style.opacity = 1;
+    document.getElementsByClassName("detailedCont")[0].style.zIndex = 1;
+    document.getElementsByClassName("detailedCont")[0].style.transform =
+      "scale(1)";
+    // setTargetE("home");
+    setTimeout(() => {
+      document.getElementsByClassName("detailedCont")[0].style.backgroundColor =
+        "#1a1e1e";
+    }, 300);
+  };
+
+  const hideDetailInfo = () => {
+    document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
+    document.getElementsByClassName("NameTag")[0].style.opacity = 1;
+    document.getElementsByClassName("NameTag")[0].style.left = "80px";
+    document.getElementsByClassName("homebtn")[0].style.opacity = 0;
+    document.getElementsByClassName("detailedCont")[0].style.opacity = 0;
+    document.getElementsByClassName("detailedCont")[0].style.zIndex = -1;
+    document.getElementsByClassName("detailedCont")[0].style.transform =
+      "scale(5)";
+    document.getElementsByClassName("detailedCont")[0].style.backgroundColor =
+      "#1a1e1e";
+    setTargetE("COVID!9");
   };
 
   return (
@@ -77,14 +110,19 @@ function App() {
           getInfo={getInfo}
           setTargetE={setTargetE}
           ShowInfoBox={ShowInfoBox}
+          hideDetailInfo={hideDetailInfo}
         />
-        <Infomation SelectedInfo={SelectedInfo} flagInfo={flagInfo} />
+        <DetailedInfo SelectedInfo={SelectedInfo} flagInfo={flagInfo} />
+        <Infomation
+          SelectedInfo={SelectedInfo}
+          flagInfo={flagInfo}
+          getDetailedInfo={getDetailedInfo}
+        />
         <WorldSVG
           setTargetE={setTargetE}
           getInfo={getInfo}
           ShowInfoBox={ShowInfoBox}
         />
-        {/* <DetailedInfo /> */}
         <script
           type="text/javascript"
           src="./Components/assets/conryArray.js"

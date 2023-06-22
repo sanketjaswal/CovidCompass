@@ -10,8 +10,8 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
     y = 0;
   const countryHover = (e) => {
     document.querySelectorAll(".allpaths").forEach((e) => {
-      e.addEventListener("mouseover", function () {
-        window.onmousemove = function (j) {
+      e.addEventListener("mouseover", function() {
+        window.onmousemove = function(j) {
           x = j.clientX;
           y = j.clientY;
           document.getElementsByClassName("hoverName")[0].style.top =
@@ -24,7 +24,7 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
         document.getElementsByClassName("hoverName")[0].style.opacity = 1;
         document.getElementsByClassName("Hnamep")[0].innerHTML = contry;
       });
-      e.addEventListener("mouseleave", function () {
+      e.addEventListener("mouseleave", function() {
         e.style.fill = "grey";
         document.getElementsByClassName("hoverName")[0].style.opacity = 0;
       });
@@ -43,6 +43,8 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
       }
     } else if (element.nodeName !== "path") {
       document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
+      document.getElementsByClassName("infoContainer")[0].style.transform =
+        "scale(0)";
       // ShowInfoBox();
       Targetelement = "Covid!9";
       setTargetE(Targetelement);
@@ -189,7 +191,7 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
         <path
           d="M1633.1 472.8l2.2-2.4 4.6-3.6-0.1 3.2-0.1 4.1-2.7-0.2-1.1 2.2-2.8-3.3z"
           id="BN"
-          className="allpaths Brunei Darussalam"
+          className="allpaths Brunei"
         ></path>
         <path
           d="M1488.8 323.5l2.6 2.1 0.5 3.9-4.5 0.2-4.7-0.4-3.2 1-5.5-2.5-0.4-1.2 2.6-4.8 2.6-1.6 4.3 1.4 2.9 0.2 2.8 1.7z"
@@ -687,7 +689,7 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
         <path
           d="M1122.6 299.1l-1.7 3.1 1 2.8-1.1 3.9 2 5.2 1.3 22.8 1 23.7 0.5 12.8-6.4 0 0 2.7-22.6-12.3-22.5-12.3-5.5 3.5-3.8 2.4-3.2-3.5-8.8-2.8-2.5-4-4.5-3-2.5 1.2-2.1-3.6-0.2-2.7-3.4-4.7 2.2-2.7-0.6-4 0.6-3.5-0.4-3 0.8-5.2-0.4-3-1.9-5.7 2.6-1.4 0.4-2.8-0.6-2.6 3.6-2.5 1.6-2.1 2.6-1.8 0.1-4.9 6.4 2.2 2.3-0.6 4.5 1.1 7.3 2.9 2.8 5.7 4.9 1.2 7.8 2.7 6 3.2 2.5-1.7 2.5-2.9-1.6-4.9 1.5-3.2 3.7-3 3.7-0.8 7.4 1.3 2 2.8 2 0.1 1.8 1.1 5.4 0.7 1.5 2.1z"
           id="LY"
-          className="allpaths Libya"
+          className="allpaths Libyan Arab Jamahiriya"
         ></path>
         <path
           d="M1445.9 462l-4.8 1.5-2.9-5.1-1.4-9.2 2-10.4 4.1 3.5 2.8 4.5 3.1 6.7-0.6 6.7-2.3 1.8z"
@@ -968,7 +970,7 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
         <path
           d="M681 464.9l-3.1 5.5 0.3 4.4 2.2 3.8-1.1 2.7-0.5 3-1.5 2.7-3.2-1.4-2.7 0.7-2.3-0.6-0.6 1.9 1 1.2-0.6 1.4-3.1-0.6-3.3-5.6-0.7-3.6-1.8 0-2.4-4.6 1.1-3.4-0.3-1.5 3.5-1.6 1-5.8 6.8 1.3 0.6-1.2 4.6-0.5 6.1 1.8z"
           id="SR"
-          className="allpaths SuriclassName"
+          className="allpaths Suriname"
         ></path>
         <path
           d="M1098.1 187.7l-1.2 1.7-0.7 2.5-1 0.6-5.5-1.9-1.6 0.4-1 1.5-2.3 0.8-0.6-0.4-2.3 0.9-1.9 0.2-0.3 1.3-4.1 0.7-1.9-0.6-2.7-1.7-0.7-2.1 0.3-0.8 0.6-1.4 2.2 0.1 1.6-0.6 0.1-0.6 0.9-0.3 0.2-1.4 1.1-0.3 0.7-1.1 1.5 0 0.3 0.4 1.9-0.9 2.7 2.2 2.8-1.3 2.4 0.6 3.5-0.9 5 2.4z"
@@ -1363,39 +1365,39 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
           d="M 1231.2 578.4 1230.7 578 1230.4 577.9 1230.1 577.7 1229.9 577.1 1230 576.8 1230 576.6 1230.2 575.4 1230.1 575.3 1230.3 574.9 1230.8 574.8 1231 575.1 1230.8 576.3 1230.9 576.6 1231.1 577 1231.2 577.5 1231.4 578.1 1231.2 578.4 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 847.8 406.5 847.6 406.8 847.4 406.6 847.4 406.3 847.7 406.2 847.8 406.5 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 849.7 406.6 849.5 406.7 849.1 406.6 848.8 406.3 848.7 406 848.9 405.6 849.4 405.3 849.8 405.3 850 406 849.9 406.4 849.7 406.6 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 853.2 403.5 853.4 403.6 853.4 403.8 853.6 404 854 404.5 854.2 404.5 854.4 404.8 854.6 405.3 854.8 405.5 854.5 406 854.2 406.1 853.7 406 853.4 405.9 853.1 405.6 853.1 405.4 852.9 405.3 852.8 404.9 852.9 404.7 852.9 404.4 853.1 404 852.9 403.5 853.2 403.5 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 856.3 403.5 856.6 403.6 856.7 404.2 856.6 404.6 856.2 404.8 855.8 404.4 856 404 855.9 403.8 856.3 403.5 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 858.3 397.8 858.6 397.6 859.1 397.8 859.2 398 859.2 398.7 858.8 399 858.5 399.2 858.2 399.2 857.7 399 857.7 398.5 857.9 398.3 857.9 397.7 858 397.6 858.3 397.8 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 850.3 395 850.7 394.9 851 395.1 851.4 395.1 851.7 395.3 851.8 395.5 851.3 395.5 850.6 395.2 850.4 395.3 850.1 395.9 849.8 395.3 849.7 395.2 849.6 394.8 849.9 394.7 850.3 395 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 858.1 394.5 858.2 394.6 858.1 395.2 857.9 395.3 857.9 394.8 857.7 394.5 857.7 394.2 857.6 393.9 858 393.6 858.2 393.8 858.1 394.4 858.1 394.5 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 846.8 393.2 847 393.5 847.1 393.8 846.4 394.1 846.1 393.9 845.9 393.7 846.3 393.3 846.8 393.2 Z"
         ></path>
         <path
-          className="allpaths Cape Verde"
+          className="allpaths Cabo Verde"
           d="M 846 391.4 846.3 391.5 846.3 391.7 846.6 392 846.4 392.4 845.8 392.7 845.4 393.1 844.7 393.2 844.7 393.1 844.7 392.6 844.5 392.4 844.5 392.2 844.7 392 844.9 392 845.1 391.8 845.8 391.4 846 391.4 Z"
         ></path>
         <path
@@ -2034,31 +2036,31 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
           className="allpaths Martinique"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 888.4 323.4 888.1 323.9 887.7 324.4 887.4 324 887 324 886.8 323.8 887 323.5 887.4 323.6 887.8 323.2 888.1 323 888.3 323.1 888.4 323.4 Z"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 902 321.1 902 321.6 902.2 322 902 322.7 902.1 323 901.7 323.4 901.2 323.6 901 323.8 900.4 323.6 899.9 323.1 899.7 322.7 899.7 322.1 900.3 321.7 900.4 321.2 900.4 321 901 321.1 901.4 321.1 901.7 321.2 902 321.1 Z"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 892.1 321.9 891.9 321.9 891.6 321.7 891.4 321.4 891.5 321 891.6 320.7 891.9 320.7 892.2 320.7 892.7 321.1 892.8 321.4 892.3 321.9 892.1 321.9 Z"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 898.2 318.4 898.2 318.6 897.6 318.9 897.2 319.4 896.9 319.6 896.9 320 896.5 320.7 896.4 321.1 895.9 321.7 895.8 321.9 895.6 321.9 895 322.1 894.9 322 894.8 321.6 894.5 321.2 894.4 321 894.2 320.7 894.2 320.4 893.8 319.8 894.3 319.5 894.6 319.7 895.2 319.5 895.6 319.5 896.1 319.3 896.6 318.9 896.6 318.7 897.2 318.4 897.8 318.4 898.1 318.3 898.2 318.4 Z"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 908.4 321.2 908.1 321.6 907.7 321.7 907.4 321.6 907 321.6 907 321.4 907.3 321.4 907.9 321.2 908.3 320.9 908.6 320.6 908.7 320.1 908.8 319.8 909 319.3 909.3 318.9 909.6 318.3 909.8 317.5 910 317.3 910.4 317.2 910.7 317.5 910.8 318 910.7 318.5 910.6 319 910.6 319.5 910.5 319.6 910.2 320.3 909.9 320.6 909.3 320.7 908.6 321 908.4 321.2 Z"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 888.8 316.7 889.1 316.6 889.3 316.9 889.5 317.4 889.3 317.7 889.4 318.1 888.8 319.1 888.7 319 888.6 318.6 888.2 317.7 888.1 317.4 888 317.2 888.2 316.8 888.5 316.6 888.8 316.7 Z"
         ></path>
         <path
-          className="allpaths Canary Islands (Spain)"
+          className="allpaths Spain"
           d="M 912.9 314.7 912.9 315.1 912.7 315.6 912 316.1 911.5 316.2 911.1 316.7 910.6 316.5 910.6 316.4 910.8 316 910.8 315.6 911 315.3 911.3 315.1 911.6 315.1 911.9 314.8 912.4 314.8 912.5 314.7 912.7 314.2 912.9 314.1 913.1 314.3 912.9 314.7 Z"
         ></path>
         <path
@@ -2069,7 +2071,7 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
         <path
           d="M1295 635.8l0.4 0 0.4 0.2 0.3 0.3 0 0.3 0.1 0.5 0.3 0.2 0.2 0.2 0.1 0.2-0.2 0.6-0.1 0.4-0.2 0.2-0.4 0.1-0.9 0-0.2-0.2-0.8-0.4-0.3-0.5 0-0.3-0.3-0.6 0.1-0.4 0.2-0.2 0.2-0.4 0.1 0 0.5-0.2 0.5 0z"
           id="RE"
-          className="allpaths Reunion"
+          className="allpaths Réunion"
         ></path>
         <path
           className="allpaths Guadeloupe"

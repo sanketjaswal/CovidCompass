@@ -1,4 +1,9 @@
 
+.worldSVG{
+  /* background-color: brown; */
+  /* position: absolute; */
+}
+
 svg {
   transition: .5s;
   stroke: var(--worldColor);

@@ -1,11 +1,11 @@
 import React from "react";
 import "./info.css";
 
-export const Infomation = ({ SelectedInfo, flagInfo }) => {
+export const Infomation = ({ SelectedInfo, flagInfo, getDetailedInfo }) => {
   //   console.log(flagInfo.flag);
   // console.log(SelectedInfo);
   return (
-    <div className="infoContainer">
+    <div className="infoContainer" onClick={() => getDetailedInfo()}>
       <div className="infoFlagCont">
         <img className="Flag" src={flagInfo.flag} alt="No Information" />
       </div>

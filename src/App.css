@@ -18,8 +18,11 @@ body {
   background-position: center;
   background-size: cover;
   background-blend-mode: color-burn;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .CONTAINER {
   user-select: none;
+  /* display: flex; */
 }

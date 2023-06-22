@@ -2,7 +2,13 @@ import React from "react";
 import "./navbar.css";
 import { ContryARR } from "./assets/conryArray";
 
-export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
+export const Navbar = ({
+  TargetE,
+  getInfo,
+  setTargetE,
+  ShowInfoBox,
+  hideDetailInfo,
+}) => {
   //Nav mover
   let countMenu = true;
   const moveNav = (evt) => {
@@ -147,7 +153,12 @@ export const Navbar = ({ TargetE, getInfo, setTargetE, ShowInfoBox }) => {
             />
           </div>
         </div>
-        <p className="meuText">Statistics</p>
+        <div className="navBtns">
+          <p className="meuText">STATS</p>
+        </div>
+      </div>
+      <div className="homebtn" onClick={() => hideDetailInfo()}>
+        <h1>Home</h1>
       </div>
       <div className="nameHolder">
         <div className="NameTag">
