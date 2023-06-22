@@ -8,6 +8,7 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
   // Country hover name over
   let x = 0,
     y = 0;
+
   const countryHover = (e) => {
     document.querySelectorAll(".allpaths").forEach((e) => {
       e.addEventListener("mouseover", function() {
@@ -45,14 +46,12 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
       document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
       document.getElementsByClassName("infoContainer")[0].style.transform =
         "scale(0)";
-      // ShowInfoBox();
       Targetelement = "Covid!9";
       setTargetE(Targetelement);
     } else if (element.tagName === "path") {
       Targetelement = element.attributes.class.value.replace("allpaths ", "");
       setTargetE(Targetelement);
       getInfo(Targetelement);
-      //   ShowdetailInfo(Targetelement);
     }
   };
 

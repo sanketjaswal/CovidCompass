@@ -1,5 +1,5 @@
 .detailedCont {
-  background-color: #1b1717;
+  background-color: var(--worldColor);
   width: 100vw;
   height: 100vh;
   position: absolute;
@@ -9,14 +9,14 @@
   /* bottom: 0; */
   z-index: -1;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.2s;
   transform: scale(10);
 }
 
 .DetailHolder {
   /* background-color: rgba(137, 43, 226, 0.641); */
   width: 95%;
-  height: 90%;
+  height: 80%;
   display: flex;
   justify-content: space-evenly;
   margin: 1%;

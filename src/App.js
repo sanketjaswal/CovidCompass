@@ -5,7 +5,6 @@ import { Navbar } from "./Components/navbar";
 import { WorldSVG } from "./Components/worldsvg";
 import { Infomation } from "./Components/info";
 import { DetailedInfo } from "./Components/detailedInfo";
-// import { ContryARR } from "./Components/assets/conryArray";
 
 function App() {
   //Name Tag
@@ -51,6 +50,7 @@ function App() {
         ctryFound = listSearch[i];
         // console.log(ctryFound.countryInfo.flag);
         setSelectedInfo(ctryFound);
+
         setflagInfo(ctryFound.countryInfo);
         ShowInfoBox();
       } else if (contryName === "not found") {
@@ -70,37 +70,30 @@ function App() {
     }, 500);
   };
 
+  // show detailed infomation of countries
   const getDetailedInfo = () => {
     document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
     document.getElementsByClassName("NameTag")[0].style.opacity = 0;
     document.getElementsByClassName("NameTag")[0].style.left = "240px";
     document.getElementsByClassName("homebtn")[0].style.opacity = 1;
-
     document.getElementsByClassName("detailedCont")[0].style.opacity = 1;
     document.getElementsByClassName("detailedCont")[0].style.zIndex = 1;
     document.getElementsByClassName("detailedCont")[0].style.transform =
       "scale(1)";
-    // setTargetE("home");
-    setTimeout(() => {
-      document.getElementsByClassName("detailedCont")[0].style.backgroundColor =
-        "#1a1e1e";
-    }, 300);
   };
 
+  // hide detailed infomation of countries
   const hideDetailInfo = () => {
     document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
+    document.getElementsByClassName("detailedCont")[0].style.transform =
+      "scale(10)";
     document.getElementsByClassName("NameTag")[0].style.opacity = 1;
     document.getElementsByClassName("NameTag")[0].style.left = "80px";
     document.getElementsByClassName("homebtn")[0].style.opacity = 0;
     document.getElementsByClassName("detailedCont")[0].style.opacity = 0;
     document.getElementsByClassName("detailedCont")[0].style.zIndex = -1;
-    document.getElementsByClassName("detailedCont")[0].style.transform =
-      "scale(5)";
-    document.getElementsByClassName("detailedCont")[0].style.backgroundColor =
-      "#1a1e1e";
     setTargetE("COVID!9");
   };
-
   return (
     <div className="App">
       <div className="CONTAINER">

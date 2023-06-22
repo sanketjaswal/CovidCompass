@@ -3,8 +3,17 @@ import "./detailedInfo.css";
 import { DetailSlots } from "./detailSlots";
 
 export const DetailedInfo = ({ SelectedInfo, flagInfo }) => {
-  // useEffect(() => {
-  // }, [SelectedInfo]);
+  useEffect(() => {});
+
+  // Convert UNIX Time to GMT
+  let updtedTime = "";
+  const convertTimestamptoTime = () => {
+    let unixTimestamp = SelectedInfo.updated;
+    let dateObj = new Date(unixTimestamp);
+    let utcString = dateObj.toUTCString();
+    updtedTime = utcString.slice(-24, -3);
+    return updtedTime;
+  };
 
   return (
     <div className="detailedCont">
@@ -13,15 +22,13 @@ export const DetailedInfo = ({ SelectedInfo, flagInfo }) => {
           sName={"THIS"}
           lName={"COUNTRY"}
           data={SelectedInfo.country}
-          color={"rgb(62, 157, 181)"}
-          // flagInfo={flagInfo.flag}
+          color={"cadetblue"}
         />
-        <DetailSlots flagInfo={flagInfo.flag} />
         <DetailSlots
           sName={"TOTAL"}
           lName={"POPULATION"}
           data={SelectedInfo.population}
-          color={"grey"}
+          color={"#cabc38"}
         />
         <DetailSlots
           sName={"TOTAL"}
@@ -35,6 +42,7 @@ export const DetailedInfo = ({ SelectedInfo, flagInfo }) => {
           data={SelectedInfo.deaths}
           color={"rgb(196, 92, 50)"}
         />
+        <DetailSlots flagInfo={flagInfo.flag} />
         <DetailSlots
           sName={"TOTAL"}
           lName={"ACTIVE"}
@@ -45,7 +53,13 @@ export const DetailedInfo = ({ SelectedInfo, flagInfo }) => {
           sName={"TOTAL"}
           lName={"CONFIRMED"}
           data={SelectedInfo.cases}
-          color={"#cabc38"}
+          color={"turquoise"}
+        />
+        <DetailSlots
+          sName={"LAST"}
+          lName={"UPDATED"}
+          data={convertTimestamptoTime()}
+          color={"grey"}
         />
       </div>
     </div>
