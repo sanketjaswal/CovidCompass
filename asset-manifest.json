@@ -1,15 +1,15 @@
 {
-  "main.css": "/covid_tracker/static/css/main.9dab2702.chunk.css",
-  "main.js": "/covid_tracker/static/js/main.693fda6c.chunk.js",
-  "main.js.map": "/covid_tracker/static/js/main.693fda6c.chunk.js.map",
-  "static/js/1.03c018fb.chunk.js": "/covid_tracker/static/js/1.03c018fb.chunk.js",
-  "static/js/1.03c018fb.chunk.js.map": "/covid_tracker/static/js/1.03c018fb.chunk.js.map",
-  "static/js/2.5ddff06c.chunk.js": "/covid_tracker/static/js/2.5ddff06c.chunk.js",
-  "static/js/2.5ddff06c.chunk.js.map": "/covid_tracker/static/js/2.5ddff06c.chunk.js.map",
-  "runtime~main.js": "/covid_tracker/static/js/runtime~main.30c6f905.js",
-  "runtime~main.js.map": "/covid_tracker/static/js/runtime~main.30c6f905.js.map",
-  "static/css/main.9dab2702.chunk.css.map": "/covid_tracker/static/css/main.9dab2702.chunk.css.map",
+  "main.css": "/covid_tracker/static/css/main.e296cfba.chunk.css",
+  "main.js": "/covid_tracker/static/js/main.aa6d7ff9.chunk.js",
+  "main.js.map": "/covid_tracker/static/js/main.aa6d7ff9.chunk.js.map",
+  "runtime~main.js": "/covid_tracker/static/js/runtime~main.64f32ee4.js",
+  "runtime~main.js.map": "/covid_tracker/static/js/runtime~main.64f32ee4.js.map",
+  "static/js/2.11bf63fa.chunk.js": "/covid_tracker/static/js/2.11bf63fa.chunk.js",
+  "static/js/2.11bf63fa.chunk.js.map": "/covid_tracker/static/js/2.11bf63fa.chunk.js.map",
+  "static/js/3.e513e70d.chunk.js": "/covid_tracker/static/js/3.e513e70d.chunk.js",
+  "static/js/3.e513e70d.chunk.js.map": "/covid_tracker/static/js/3.e513e70d.chunk.js.map",
   "index.html": "/covid_tracker/index.html",
-  "precache-manifest.632beea331d5c47e56c5487443a07718.js": "/covid_tracker/precache-manifest.632beea331d5c47e56c5487443a07718.js",
-  "service-worker.js": "/covid_tracker/service-worker.js"
+  "precache-manifest.65ca88ed8a0a7873d4203f37809dc4a9.js": "/covid_tracker/precache-manifest.65ca88ed8a0a7873d4203f37809dc4a9.js",
+  "service-worker.js": "/covid_tracker/service-worker.js",
+  "static/css/main.e296cfba.chunk.css.map": "/covid_tracker/static/css/main.e296cfba.chunk.css.map"
 }
