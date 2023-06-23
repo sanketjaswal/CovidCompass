@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import allCoronaData from "./assets/allCoronaArray.json";
-import ApexCharts from "apexcharts";
+// import ApexCharts from "apexcharts";
 
 const Stats = () => {
   const [Newresp, setNewresp] = useState("Hello");
