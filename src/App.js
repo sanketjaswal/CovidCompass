@@ -19,8 +19,17 @@ function App() {
     }, 1000);
   }, []);
 
+  const doSomething = (callback) => {
+    const result = "hello brother";
+    // console.log(result);
+    callback(result);
+  };
+
   //start functions
   const startFunctions = () => {
+    doSomething((result) => {
+      console.log(result);
+    });
     document.getElementsByClassName("startCont")[0].style.opacity = "0";
     document.getElementsByClassName("startCont")[0].style.transform =
       "scale(0)";
@@ -94,6 +103,7 @@ function App() {
     document.getElementsByClassName("detailedCont")[0].style.zIndex = -1;
     setTargetE("COVID!9");
   };
+
   return (
     <div className="App">
       <div className="CONTAINER">

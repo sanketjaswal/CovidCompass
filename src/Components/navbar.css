@@ -93,7 +93,7 @@
 
 .MenuTab {
   display: flex;
-  min-width: 30%;
+  min-width: 10%;
   min-height: 60px;
   margin: 0;
   justify-content: space-around;

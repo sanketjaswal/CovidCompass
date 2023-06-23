@@ -28,7 +28,7 @@ export const Navbar = ({
   //Nav caller
   const caller = (targetM) => {
     document.getElementsByClassName(targetM)[0].style.opacity = 1;
-    document.getElementsByClassName(targetM)[0].style.minWidth = "50%";
+    document.getElementsByClassName(targetM)[0].style.minWidth = "30%";
     document.getElementsByClassName("MText")[0].style.transform =
       "rotate(90deg)";
     document.getElementById("svgworld").style.stroke = "rgb(137, 137, 137)";
@@ -152,9 +152,11 @@ export const Navbar = ({
             />
           </div>
         </div>
-        <div className="navBtns">
-          <p className="meuText">{/* <Link to="/Stats">Stats</Link> */}</p>
-        </div>
+        {/* <div className="navBtns">
+          <p className="meuText">
+            <Link to="/Stats">Stats</Link>
+          </p>
+        </div> */}
       </div>
       <div className="homebtn" onClick={() => hideDetailInfo()}>
         <h2>
