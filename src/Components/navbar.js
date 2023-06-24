@@ -1,7 +1,6 @@
 import React from "react";
 import "./navbar.css";
 import { ContryARR } from "./assets/conryArray";
-import { Link } from "react-router-dom";
 
 export const Navbar = ({
   TargetE,
@@ -9,6 +8,8 @@ export const Navbar = ({
   setTargetE,
   ShowInfoBox,
   hideDetailInfo,
+  getStats,
+  hideStats,
 }) => {
   //Nav mover
   let countMenu = true;
@@ -17,27 +18,27 @@ export const Navbar = ({
     navHover(targetM.className);
 
     if (countMenu === true) {
-      caller(targetM.className);
+      caller();
       countMenu = false;
     } else if (countMenu === false) {
-      returner(targetM.className);
+      returner();
       countMenu = true;
     }
   };
 
   //Nav caller
-  const caller = (targetM) => {
-    document.getElementsByClassName(targetM)[0].style.opacity = 1;
-    document.getElementsByClassName(targetM)[0].style.minWidth = "30%";
+  const caller = () => {
+    document.getElementsByClassName("MenuTab")[0].style.opacity = 1;
+    document.getElementsByClassName("MenuTab")[0].style.minWidth = "40%";
     document.getElementsByClassName("MText")[0].style.transform =
       "rotate(90deg)";
     document.getElementById("svgworld").style.stroke = "rgb(137, 137, 137)";
   };
 
   //Nav returner
-  const returner = (targetM) => {
-    document.getElementsByClassName(targetM)[0].style.opacity = 0;
-    document.getElementsByClassName(targetM)[0].style.minWidth = "0%";
+  const returner = () => {
+    document.getElementsByClassName("MenuTab")[0].style.opacity = 0;
+    document.getElementsByClassName("MenuTab")[0].style.minWidth = "0%";
     document.getElementsByClassName("MText")[0].style.transform =
       "rotate(0deg)";
     // console.log(document.getElementById("svgworld"));
@@ -45,11 +46,11 @@ export const Navbar = ({
   };
 
   //   Nav retract timer
-  const navHover = (targetForNAV) => {
+  const navHover = () => {
     document.querySelectorAll("#navbar").forEach((e) => {
-      e.addEventListener("mouseleave", function() {
+      e.addEventListener("mouseleave", function () {
         setTimeout(() => {
-          returner(targetForNAV);
+          returner();
         }, 1000);
         countMenu = true;
       });
@@ -67,7 +68,7 @@ export const Navbar = ({
   let contryName;
   let cp;
   const grabEnter = () => {
-    document.addEventListener("keydown", function(event) {
+    document.addEventListener("keydown", function (event) {
       let gg = document
         .getElementsByClassName("searchBar")[0]
         .value.toLowerCase();
@@ -152,13 +153,23 @@ export const Navbar = ({
             />
           </div>
         </div>
-        {/* <div className="navBtns">
-          <p className="meuText">
-            <Link to="/Stats">Stats</Link>
-          </p>
-        </div> */}
+        <div
+          className="navBtns"
+          onClick={() => {
+            getStats();
+            returner();
+          }}
+        >
+          <p className="meuText">Stats</p>
+        </div>
       </div>
-      <div className="homebtn" onClick={() => hideDetailInfo()}>
+      <div
+        className="homebtn"
+        onClick={() => {
+          hideDetailInfo();
+          hideStats();
+        }}
+      >
         <h2>
           <svg
             xmlns="http://www.w3.org/2000/svg"

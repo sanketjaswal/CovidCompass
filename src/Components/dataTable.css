@@ -1,0 +1,134 @@
+.tableContainer {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #0c0a16;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  z-index: 0;
+  top: 1;
+  transform: scale(1);
+  position: absolute;
+  transition: .5s;
+
+}
+
+.tableHeader {
+  width: 87vw;
+  height: 13vh;
+  background-color: rgb(219, 89, 89);
+  background-image: url(./assets/Coronavirus-drugs.png);
+  background-position: 0 51%;
+  background-repeat: no-repeat;
+  background-size: cover;
+ position: relative;
+  border-radius: 25px 25px 0 0;
+}
+
+.tableHeader h1 {
+  color: white;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-shadow: 2px 3px 5px black;
+  font-size: 50px;
+  position: absolute;
+  top: 20%;
+  left: 2%;
+}
+
+#searchBar {
+  background-image: url('./assets/icons8-search-50.png');
+  background-position: 3px 5px;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  width: 15%;
+  font-size: 20px;
+  padding: 6px 0px 6px 33px;
+  border: 1px solid #ddd;
+  position: absolute;
+  outline:none;
+  border-radius: 5px;
+  right: 17px;
+  bottom: 10px;
+  color: rgb(98, 98, 98);
+}
+
+.tableHolder {
+  background-color: var(--worldcolor);
+  width: 87vw;
+  height: 85vh;
+  border-radius: 0 0 10px 10px;
+  overflow: scroll;
+}
+
+table {
+  background-color: blueviolet;
+  width: 87vw;
+  border-collapse: collapse;
+  display: table;
+  max-height: 100%;
+}
+
+table tr {
+  display: table-row;
+  cursor: pointer;
+  font-weight: 500;
+  height: 35px;
+}
+
+table thead {
+  position: sticky;
+  top: 0;
+}
+
+table td {
+  display: table-cell;
+  padding: 1px;
+  text-align: end;
+  border: 1px dotted rgb(124, 124, 124);
+  padding: 2px 3px;
+  font-size: 18.5px;
+}
+
+tr:hover {
+  background-color: rgb(255, 228, 187);
+    font-weight: 600;
+
+}
+
+th {
+  background-color: #0c0a16;
+  color: rgb(192, 192, 192);
+  text-align: center;
+  font-size: 17px;
+  /* font-weight: normal; */
+  padding: 6px 2px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.tableRow {
+  background-color: white;
+}
+
+.tableFlag {
+  background-image: url("https://disease.sh/assets/img/flags/in.png");
+  width: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 13px;
+  padding: 0 0 0 5px;
+}
+
+.tableRow td:nth-child(1) {
+  text-align: left;
+  padding: 5px 0 5px 15px;
+  width: 240px;
+  
+}
+
+tbody .tableRow:nth-child(even) {
+  background-color: #eaeaff;
+}

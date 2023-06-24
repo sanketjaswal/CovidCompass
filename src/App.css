@@ -18,7 +18,12 @@ body {
   background-position: center;
   background-size: cover;
   background-blend-mode: color-burn;
-  overflow-x: hidden;
+  overflow-x: hidden;  
+  overflow-y: hidden;
+}
+
+.App{
+    overflow-x: hidden;
   overflow-y: hidden;
 }
 

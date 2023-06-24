@@ -5,6 +5,7 @@ import { Navbar } from "./Components/navbar";
 import { WorldSVG } from "./Components/worldsvg";
 import { Infomation } from "./Components/info";
 import { DetailedInfo } from "./Components/detailedInfo";
+import { DataTable } from "./Components/dataTable";
 
 function App() {
   //Name Tag
@@ -19,17 +20,8 @@ function App() {
     }, 1000);
   }, []);
 
-  const doSomething = (callback) => {
-    const result = "hello brother";
-    // console.log(result);
-    callback(result);
-  };
-
   //start functions
   const startFunctions = () => {
-    doSomething((result) => {
-      console.log(result);
-    });
     document.getElementsByClassName("startCont")[0].style.opacity = "0";
     document.getElementsByClassName("startCont")[0].style.transform =
       "scale(0)";
@@ -48,6 +40,7 @@ function App() {
     response = await response.json();
     setResponse(response);
     console.log(response);
+    return response;
   }
 
   //get infomation from the response
@@ -104,6 +97,35 @@ function App() {
     setTargetE("COVID!9");
   };
 
+  // show detailed infomation of countries
+  const getStats = () => {
+    document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
+    document.getElementsByClassName("NameTag")[0].style.opacity = 0;
+    document.getElementsByClassName("homebtn")[0].style.opacity = 1;
+    document.getElementsByClassName("homebtn")[0].style.left = 0;
+    document.getElementsByClassName("tableContainer")[0].style.opacity = 1;
+    document.getElementsByClassName("tableContainer")[0].style.zIndex = 1;
+    document.getElementsByClassName("tableContainer")[0].style.top = 0;
+    document.getElementsByClassName("tableContainer")[0].style.transform =
+      "scale(1)";
+    document.getElementsByClassName("Menu")[0].style.zIndex = 0;
+    document.getElementsByClassName("Menu")[0].style.opacity = 0;
+  };
+
+  const hideStats = () => {
+    document.getElementsByClassName("infoContainer")[0].style.opacity = 1;
+    document.getElementsByClassName("NameTag")[0].style.opacity = 1;
+    document.getElementsByClassName("homebtn")[0].style.opacity = 0;
+    document.getElementsByClassName("homebtn")[0].style.left = "80px";
+    document.getElementsByClassName("tableContainer")[0].style.opacity = 0;
+    document.getElementsByClassName("tableContainer")[0].style.zIndex = 0;
+    document.getElementsByClassName("tableContainer")[0].style.top = 1;
+    document.getElementsByClassName("tableContainer")[0].style.transform =
+      "scale(1)";
+    document.getElementsByClassName("Menu")[0].style.zIndex = 3;
+    document.getElementsByClassName("Menu")[0].style.opacity = 1;
+  };
+
   return (
     <div className="App">
       <div className="CONTAINER">
@@ -114,6 +136,8 @@ function App() {
           setTargetE={setTargetE}
           ShowInfoBox={ShowInfoBox}
           hideDetailInfo={hideDetailInfo}
+          getStats={getStats}
+          hideStats={hideStats}
         />
         <DetailedInfo SelectedInfo={SelectedInfo} flagInfo={flagInfo} />
         <Infomation
@@ -126,6 +150,7 @@ function App() {
           getInfo={getInfo}
           ShowInfoBox={ShowInfoBox}
         />
+        <DataTable />
         <script
           type="text/javascript"
           src="./Components/assets/conryArray.js"
