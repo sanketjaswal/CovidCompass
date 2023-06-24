@@ -1,15 +1,16 @@
 {
-  "main.css": "/covid_tracker/static/css/main.e296cfba.chunk.css",
-  "main.js": "/covid_tracker/static/js/main.aa6d7ff9.chunk.js",
-  "main.js.map": "/covid_tracker/static/js/main.aa6d7ff9.chunk.js.map",
-  "runtime~main.js": "/covid_tracker/static/js/runtime~main.64f32ee4.js",
-  "runtime~main.js.map": "/covid_tracker/static/js/runtime~main.64f32ee4.js.map",
-  "static/js/2.11bf63fa.chunk.js": "/covid_tracker/static/js/2.11bf63fa.chunk.js",
-  "static/js/2.11bf63fa.chunk.js.map": "/covid_tracker/static/js/2.11bf63fa.chunk.js.map",
-  "static/js/3.e513e70d.chunk.js": "/covid_tracker/static/js/3.e513e70d.chunk.js",
-  "static/js/3.e513e70d.chunk.js.map": "/covid_tracker/static/js/3.e513e70d.chunk.js.map",
+  "main.css": "/covid_tracker/static/css/main.bccf4b4c.chunk.css",
+  "main.js": "/covid_tracker/static/js/main.cb1a1242.chunk.js",
+  "main.js.map": "/covid_tracker/static/js/main.cb1a1242.chunk.js.map",
+  "runtime~main.js": "/covid_tracker/static/js/runtime~main.4cb8dda7.js",
+  "runtime~main.js.map": "/covid_tracker/static/js/runtime~main.4cb8dda7.js.map",
+  "static/js/2.9d16ae20.chunk.js": "/covid_tracker/static/js/2.9d16ae20.chunk.js",
+  "static/js/2.9d16ae20.chunk.js.map": "/covid_tracker/static/js/2.9d16ae20.chunk.js.map",
+  "static/js/3.3f8aa67b.chunk.js": "/covid_tracker/static/js/3.3f8aa67b.chunk.js",
+  "static/js/3.3f8aa67b.chunk.js.map": "/covid_tracker/static/js/3.3f8aa67b.chunk.js.map",
   "index.html": "/covid_tracker/index.html",
-  "precache-manifest.65ca88ed8a0a7873d4203f37809dc4a9.js": "/covid_tracker/precache-manifest.65ca88ed8a0a7873d4203f37809dc4a9.js",
+  "precache-manifest.fa231be0b92fc7c8b9f950e355ac262f.js": "/covid_tracker/precache-manifest.fa231be0b92fc7c8b9f950e355ac262f.js",
   "service-worker.js": "/covid_tracker/service-worker.js",
-  "static/css/main.e296cfba.chunk.css.map": "/covid_tracker/static/css/main.e296cfba.chunk.css.map"
+  "static/css/main.bccf4b4c.chunk.css.map": "/covid_tracker/static/css/main.bccf4b4c.chunk.css.map",
+  "static/media/dataTable.css": "/covid_tracker/static/media/Coronavirus-drugs.4eeee240.png"
 }
