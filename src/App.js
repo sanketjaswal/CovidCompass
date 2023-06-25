@@ -39,7 +39,7 @@ function App() {
     response = await fetch(`https://disease.sh/v3/covid-19/countries`);
     response = await response.json();
     setResponse(response);
-    console.log(response);
+    // console.log(response[0].countryInfo.flag);
     return response;
   }
 
@@ -121,7 +121,7 @@ function App() {
     document.getElementsByClassName("tableContainer")[0].style.zIndex = 0;
     document.getElementsByClassName("tableContainer")[0].style.top = 1;
     document.getElementsByClassName("tableContainer")[0].style.transform =
-      "scale(1)";
+      "scale(0)";
     document.getElementsByClassName("Menu")[0].style.zIndex = 3;
     document.getElementsByClassName("Menu")[0].style.opacity = 1;
   };

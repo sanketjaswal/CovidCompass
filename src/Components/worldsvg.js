@@ -11,8 +11,8 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
 
   const countryHover = (e) => {
     document.querySelectorAll(".allpaths").forEach((e) => {
-      e.addEventListener("mouseover", function() {
-        window.onmousemove = function(j) {
+      e.addEventListener("mouseover", function () {
+        window.onmousemove = function (j) {
           x = j.clientX;
           y = j.clientY;
           document.getElementsByClassName("hoverName")[0].style.top =
@@ -23,9 +23,11 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
         e.style.fill = "rgba(253, 108, 108, 0.795)";
         let contry = e.attributes.class.value.replace("allpaths ", "");
         document.getElementsByClassName("hoverName")[0].style.opacity = 1;
+        // document.querySelector(contry).style.fill = "red";
+        // console.log(contry);
         document.getElementsByClassName("Hnamep")[0].innerHTML = contry;
       });
-      e.addEventListener("mouseleave", function() {
+      e.addEventListener("mouseleave", function () {
         e.style.fill = "grey";
         document.getElementsByClassName("hoverName")[0].style.opacity = 0;
       });

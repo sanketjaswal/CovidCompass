@@ -9,30 +9,43 @@ export const DataTable = () => {
     { 0: "shubham", 1: "jas" },
   ];
   const [Resp, setResp] = useState(res);
+  const [RespAll, setRespAll] = useState(res);
 
   useEffect(() => {
-    getCovid2();
+    setTimeout(() => {
+      getCovidAll();
+      getCovid2();
+    }, 5000);
   }, []);
 
-  let response2;
-
   async function getCovid2() {
+    let response2;
     response2 = await fetch(`https://disease.sh/v3/covid-19/countries`);
     response2 = await response2.json();
+    for (let i = 0; i < response2.length; i++) {
+      response2[i].flag = response2[i].countryInfo.flag;
+    }
     setResp(response2);
-    // console.log(response2);
   }
+
+  const getCovidAll = async () => {
+    let responseAll;
+    responseAll = await fetch("https://disease.sh/v3/covid-19/all");
+    responseAll = await responseAll.json();
+    setRespAll(responseAll);
+  };
 
   let input, table, tr, td, txtValue;
   function countrySearch() {
     input = document.getElementById("searchBar").value.toUpperCase();
     table = document.getElementById("myTable");
     tr = table.getElementsByTagName("tr");
+    // console.log(tr);
     for (let i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[0];
+      td = tr[i].getElementsByTagName("td")[1];
       if (td) {
         txtValue = td.textContent || td.innerText;
-        console.log(txtValue);
+        // console.log(indexOf(input));
         if (txtValue.toUpperCase().indexOf(input) > -1) {
           tr[i].style.display = "";
         } else {
@@ -57,7 +70,7 @@ export const DataTable = () => {
         <table id="myTable">
           <thead>
             <tr>
-              {/* <th>Flag</th> */}
+              <th>Flag</th>
               <th>Country</th>
               <th>Total Cases</th>
               <th>Total Deaths</th>
@@ -69,12 +82,22 @@ export const DataTable = () => {
             </tr>
           </thead>
           <tbody>
-            {Resp.map((singleInfo) => (
-              <Tablerow
-                key={res.id}
-                singleInfo={singleInfo}
-                flagInfo={singleInfo.countryInfo}
-              />
+            <tr className="tableRow">
+              <td>
+                <div className="tableFlag"></div>
+              </td>
+              <td>World</td>
+              <td>{RespAll.cases}</td>
+              <td>{RespAll.deaths}</td>
+              <td>{RespAll.recovered}</td>
+              <td>{RespAll.active}</td>
+              <td>{RespAll.tests}</td>
+              <td>{RespAll.critical}</td>
+              <td>{RespAll.population}</td>
+            </tr>
+
+            {Resp.map((singleInfo, index) => (
+              <Tablerow key={index} singleInfo={singleInfo} />
             ))}
           </tbody>
         </table>

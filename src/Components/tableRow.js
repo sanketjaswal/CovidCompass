@@ -1,20 +1,18 @@
 import React from "react";
 import "./dataTable.css";
 
-export const Tablerow = ({ singleInfo, flagInfo }) => {
-  // console.log(flagInfo[0]);
+export const Tablerow = ({ singleInfo }) => {
+  // console.log(key);
   return (
     <tr className="tableRow">
-      {/* <td>
+      <td>
         <div
           className="tableFlag"
-          style={
-            {
-              backgroundImage: `url(${""})`,
-            }
-          }
+          style={{
+            backgroundImage: `url(${singleInfo.flag})`,
+          }}
         ></div>
-      </td> */}
+      </td>
       <td>{singleInfo.country}</td>
       <td>{singleInfo.cases}</td>
       <td>{singleInfo.deaths}</td>
