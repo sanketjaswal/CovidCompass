@@ -1,7 +1,7 @@
 {
-  "main.css": "/covid_tracker/static/css/main.bccf4b4c.chunk.css",
-  "main.js": "/covid_tracker/static/js/main.cb1a1242.chunk.js",
-  "main.js.map": "/covid_tracker/static/js/main.cb1a1242.chunk.js.map",
+  "main.css": "/covid_tracker/static/css/main.20bc41df.chunk.css",
+  "main.js": "/covid_tracker/static/js/main.cdd7ffc7.chunk.js",
+  "main.js.map": "/covid_tracker/static/js/main.cdd7ffc7.chunk.js.map",
   "runtime~main.js": "/covid_tracker/static/js/runtime~main.4cb8dda7.js",
   "runtime~main.js.map": "/covid_tracker/static/js/runtime~main.4cb8dda7.js.map",
   "static/js/2.9d16ae20.chunk.js": "/covid_tracker/static/js/2.9d16ae20.chunk.js",
@@ -9,8 +9,8 @@
   "static/js/3.3f8aa67b.chunk.js": "/covid_tracker/static/js/3.3f8aa67b.chunk.js",
   "static/js/3.3f8aa67b.chunk.js.map": "/covid_tracker/static/js/3.3f8aa67b.chunk.js.map",
   "index.html": "/covid_tracker/index.html",
-  "precache-manifest.fa231be0b92fc7c8b9f950e355ac262f.js": "/covid_tracker/precache-manifest.fa231be0b92fc7c8b9f950e355ac262f.js",
+  "precache-manifest.e705921744165937f090a56336864798.js": "/covid_tracker/precache-manifest.e705921744165937f090a56336864798.js",
   "service-worker.js": "/covid_tracker/service-worker.js",
-  "static/css/main.bccf4b4c.chunk.css.map": "/covid_tracker/static/css/main.bccf4b4c.chunk.css.map",
-  "static/media/dataTable.css": "/covid_tracker/static/media/Coronavirus-drugs.4eeee240.png"
+  "static/css/main.20bc41df.chunk.css.map": "/covid_tracker/static/css/main.20bc41df.chunk.css.map",
+  "static/media/dataTable.css": "/covid_tracker/static/media/worldFlag.69d3f494.png"
 }
