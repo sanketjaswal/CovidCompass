@@ -42,13 +42,13 @@ export const WorldSVG = ({ setTargetE, getInfo, ShowInfoBox }) => {
       if (ContryARR.includes(e)) {
         setTargetE(e);
       } else {
-        setTargetE("Covid!9");
+        setTargetE("Covid Compass");
       }
     } else if (element.nodeName !== "path") {
       document.getElementsByClassName("infoContainer")[0].style.opacity = 0;
       document.getElementsByClassName("infoContainer")[0].style.transform =
         "scale(0)";
-      Targetelement = "Covid!9";
+      Targetelement = "Covid Compass";
       setTargetE(Targetelement);
     } else if (element.tagName === "path") {
       Targetelement = element.attributes.class.value.replace("allpaths ", "");

@@ -10,7 +10,7 @@ import { DataTable } from "./Components/dataTable";
 function App() {
   //Name Tag
   const [Response, setResponse] = useState("hello");
-  const [TargetE, setTargetE] = useState("COVID!9");
+  const [TargetE, setTargetE] = useState("Covid Compass");
   const [SelectedInfo, setSelectedInfo] = useState("haha");
   const [flagInfo, setflagInfo] = useState("");
 

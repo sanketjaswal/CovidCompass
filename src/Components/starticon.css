@@ -1,31 +1,61 @@
-.startCont{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 100vh;
-    background-color: transparent;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: White;
-    font-size: 70px;
-    transition: .5s;
-    transform: scale(1);
-    position: absolute;
-    opacity: 1;
+.startCont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  color: White;
+  font-size: 70px;
+  transition: 0.5s;
+  transform: scale(1);
+  position: absolute;
+  opacity: 1;
 }
 
-.startvalue{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.startvalue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.startvalue h1{
-    color: rgb(254, 88, 88);
+
+
+.startvalue h1 {
+  color: rgb(254, 88, 88);
+  font-size: 260px;
 }
 
-.startvalue P{
-    color: rgb(159, 159, 159);
-    font-size: 20PX;
+.startnamebox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-left: -5px;
+  /* background-color: aqua; */
+}
+
+.startvalue h2 {
+      color: rgb(254, 88, 88);
+
+  font-size: 155px;
+  margin-top: -85px;
+  /* background-color: red; */
+
+  /* position: absolute; */
+}
+
+.startvalue h3 {
+  font-size: 89px;
+  position: absolute;
+  top: 65%;
+}
+
+.startCont P {
+  color: rgb(159, 159, 159);
+  font-size: 25px;
+  margin-top: -20px;
 }

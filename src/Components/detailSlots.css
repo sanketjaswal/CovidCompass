@@ -21,13 +21,13 @@
 
 .dSlotCont:hover {
   transform: scale(1.01);
-  box-shadow: 0 0 5px 2px white;
+  box-shadow: 0 0 5px 2px grey;
   transition: 0.1s;
   text-shadow: 2px 2px 1px #3b3b3b;
 }
 
 .dNameHolder {
-  /* background-color: #cabc38; */
+  /* background-color: #cabc38; */ 
   display: flex;
   justify-content: center;
   align-items: last baseline;
