@@ -6,7 +6,7 @@ Web App offers real time data and statistics related to the `COVID 19` pandemic.
 #### link to appliction
 
 ```js
-https://sanketjaswal.github.io/covid_tracker/
+https://sanketjaswal.github.io/CovidCompass/
 ```
 
 ### Packages
