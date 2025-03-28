@@ -20,12 +20,12 @@ self.__precacheManifest = [
     "url": "/CovidCompass/static/js/3.3f8aa67b.chunk.js"
   },
   {
-    "revision": "4eeee240f67b68582ddd36a246ef2c02",
-    "url": "/CovidCompass/static/media/Coronavirus-drugs.4eeee240.png"
-  },
-  {
     "revision": "69d3f494dac6afca38f6a4e1f3157a43",
     "url": "/CovidCompass/static/media/worldFlag.69d3f494.png"
+  },
+  {
+    "revision": "4eeee240f67b68582ddd36a246ef2c02",
+    "url": "/CovidCompass/static/media/Coronavirus-drugs.4eeee240.png"
   },
   {
     "revision": "bda5ab2f4270f0f38a392a088619c9bd",

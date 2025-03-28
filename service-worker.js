@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/CovidCompass/precache-manifest.293a43b59d2cd3c6218d848c4193edaa.js"
+  "/CovidCompass/precache-manifest.fb96a11c48f868779b233c3dbd132ca0.js"
 );
 
 workbox.clientsClaim();
